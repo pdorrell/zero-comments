@@ -9,6 +9,3 @@ name, to be as accurate as possible as a description of whatever it actually rep
 In line with this purpose, comments in the code are kept to a bare minimum (even though
 some level of commenting is always desirable in real code).
 
-Philip Dorrell
-
-6 April, 2012
