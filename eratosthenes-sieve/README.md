@@ -24,8 +24,8 @@ and must therefore already have been crossed out.
 don't have to check any multiples at all -- you can just read off the remaining numbers
 not crossed out as primes.
 
-Other Code Notes
-----------------
+Code Notes
+----------
 
 The sieve is most easily described as a process of "crossing out" numbers. In practice,
 in a program, one creates an array of booleans, starting as all **true** values, and

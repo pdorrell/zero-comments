@@ -8,7 +8,7 @@ name, to be as accurate as possible as a description of whatever it actually rep
 
 In line with this purpose, I have not put *any* comments in the code (with one minor 
 exception described below), even though some level of commenting is always desirable in real code
-(for example, in Python, each class and each method should have it's own **pydoc** comment).
+(for example, in Python, each class and each method should have its own **pydoc** comment).
 
 Code Notes
 ----------
