@@ -1,14 +1,12 @@
-Descriptive Code
-================
+Zero Comments
+=============
 
 This project consists of some individual code examples, which attempt to test
-the principle of "Descriptive Code" &ndash; the idea that source code can be made more
-readable simply by choosing each identifier in the code, i.e. class, method or variable
+the principle of "Zero Comments" &ndash; the idea that you should do everything
+you possibly can to make your code more readable, *without* adding any comments.
+In particular, you should make your source code as readable as it can be
+by choosing each identifier in the code, i.e. class, method or variable
 name, to be as accurate as possible as a description of whatever it actually represents.
-
-In line with this purpose, I have not put *any* comments in the code (with one minor 
-exception described below), even though some level of commenting is always desirable in real code
-(for example, in Python, each class and each method should have its own **pydoc** comment).
 
 Code Notes
 ----------
@@ -41,7 +39,7 @@ information and code notes.
 The approach of writing code without comments *and* satisying the requirement to comment classes and methods
 can be combined by applying a three-step process:
 
-1. Write self-descriptive code with no comments.
+1. Write self-descriptive code with zero comments.
 2. Add README's with background information and code notes.
 3. Then, add class and method comments to the code.
 
