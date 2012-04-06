@@ -1,15 +1,17 @@
 
-
-class SieveEratosthenes:
+class SieveOfEratosthenes:
     
     def __init__(self, sieveSize):
         self.sieveSize = sieveSize
-        self.couldBePrime = [True]*(sieveSize+1);
+        
+    def initialiseSieve(self):
+        self.couldBePrime = [True]*(self.sieveSize+1);
         self.couldBePrime[0] = False
         self.couldBePrime[1] = False
         self.nextNumberToCheck = 0
         
     def generatePrimes(self):
+        self.initialiseSieve()
         pastTheSquareRootOfSize = False
         while self.nextNumberToCheck <= self.sieveSize:
             if self.couldBePrime[self.nextNumberToCheck]:
@@ -28,10 +30,9 @@ class SieveEratosthenes:
             self.couldBePrime[multipleOfPrime] = False
             multipleOfPrime += prime
             
-            
 def main():
     SIZE = 100
-    sieve = SieveEratosthenes(SIZE)
+    sieve = SieveOfEratosthenes(SIZE)
     print ("Prime numbers up to %s:" % SIZE)
     for prime in sieve.generatePrimes():
         print (" %s" % prime)
