@@ -8,8 +8,8 @@ very large at all). Letters of the alphabet are encrypted by adding the key to
 the letter's position in the alphabet, modulo 26. Upper and lower case letters
 are encrypted by the same algorithm, but case must be preserved, so that it
 reappears correctly when the cipher is decrypted. Anything that is not a letter
-remains unchanged when encrypted (so apart from being a very weak algorithm for
-encrypting written text, it is a truly awful algorithm for encrypting credit card numbers).
+remains unchanged when encrypted (so apart from being a very weak cipher for
+encrypting written text, it is a truly awful cipher for encrypting credit card numbers).
 
 To decrypt, you just subtract the same key, modulo 26.
 
@@ -29,7 +29,7 @@ is not in either of those two alphabets (because it is not alphabetic), it remai
 The program also takes advantage of the fact that "a" to "z" and "A" to "Z" are each contiguous
 sequences of characters in the Unicode character encoding, which is what Python 3 uses to 
 encode and decode characters (via the functions **chr** and **ord**). Thus, for example, the 
-**index** of a lower case character such as "f" within the lower case alphabet, is equal to the
+**index** of a lower case character such as "f" is equal to the
 character code for "f" minus the character code for "a". The actual encryption can then be described
 as addition of the key (or "shift") to the index, modulo 26.
 
