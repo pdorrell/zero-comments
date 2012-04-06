@@ -3,12 +3,12 @@ Sieve of Eratosthenes
 
 Wikipedia link: [Sieve of Eratosthenes](Sieve of Eratosthenes)
 
-The Sieve of Eratosthenes is an algorithm for finding all prime numbers
+The **Sieve of Eratosthenes** is an algorithm for finding all prime numbers
 up to a certain limit, which works as follows:
 
 * Decide up to what number you want calculate the primes. Call this number **N**.
-* List all numbers from 1 to **N**
-* Cross out 1 as not being a prime
+* List all numbers from 1 to **N**.
+* Cross out 1 as not being a prime.
 * Repeat the following step, until all primes up to **N** have been found:
    * Pick the first number not yet crossed out.
    * This number is the next prime that you have found. Call this number **P**.
