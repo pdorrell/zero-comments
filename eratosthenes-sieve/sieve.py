@@ -14,21 +14,25 @@ class SieveOfEratosthenes:
         self.initialiseSieve()
         pastTheSquareRootOfSize = False
         while self.nextNumberToCheck <= self.sieveSize:
-            if self.couldBePrime[self.nextNumberToCheck]:
-                prime = self.nextNumberToCheck
+            candidatePrime = self.nextNumberToCheck
+            if self.couldBePrime[candidatePrime]:
+                nextPrimeFound = candidatePrime
                 if not pastTheSquareRootOfSize:
-                    if prime*prime > self.sieveSize:
+                    if nextPrimeFound*nextPrimeFound > self.sieveSize:
                         pastTheSquareRootOfSize = True
                     if not pastTheSquareRootOfSize:
-                        self.markMultiplesNotPrime(prime)
-                yield prime
+                        self.markMultiplesNotPrime(nextPrimeFound)
+                yield nextPrimeFound
             self.nextNumberToCheck += 1
             
+    def markNumberAsComposite(self, number):
+        self.couldBePrime[number] = False
+            
     def markMultiplesNotPrime(self, prime):
-        multipleOfPrime = prime*prime
-        while (multipleOfPrime <= self.sieveSize):
-            self.couldBePrime[multipleOfPrime] = False
-            multipleOfPrime += prime
+        multipleOfPrimeToBeMarked = prime*prime
+        while (multipleOfPrimeToBeMarked <= self.sieveSize):
+            self.markNumberAsComposite(multipleOfPrimeToBeMarked)
+            multipleOfPrimeToBeMarked += prime
             
 def main():
     SIZE = 100
